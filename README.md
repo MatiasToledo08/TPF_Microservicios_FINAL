@@ -111,8 +111,8 @@ mvn spring-boot:run
 ### Orders
 - [http://localhost:8085/swagger-ui.html](http://localhost:8085/swagger-ui.html)
 
-usuario: user
-contraseña: 1234
+- usuario: user
+- contraseña: 1234
 
 > Swagger permite probar todos los endpoints desde el navegador.
 
