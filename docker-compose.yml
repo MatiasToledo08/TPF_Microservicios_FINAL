@@ -1,0 +1,29 @@
+version: '3'
+services:
+  db-product:
+    container_name: db-product-v3
+    image: postgres:15.2
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: product
+      POSTGRES_USER: axel
+      POSTGRES_PASSWORD: axel
+    ports:
+      - '5434:5431'
+    expose:
+      - 5431
+    command: -p 5431
+
+  db-orders:
+      container_name: db-orders-v2
+      image: postgres:15.2
+      restart: unless-stopped
+      environment:
+        POSTGRES_DB: ms_orders
+        POSTGRES_USER: axel
+        POSTGRES_PASSWORD: axel
+      ports:
+        - '5433:5432'
+      expose:
+        - 5432
+      command: -p 5432
